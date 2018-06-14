@@ -22,6 +22,7 @@ public class Dota2Guide extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        group = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         titleLabel = new javax.swing.JLabel();
         subTitleLabel = new javax.swing.JLabel();
@@ -44,18 +45,30 @@ public class Dota2Guide extends javax.swing.JFrame {
 
         subTitleLabel.setText("Beginner Guide To Dota 2:");
 
+        group.add(moveButton);
         moveButton.setText("How To Move:");
+        moveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moveButtonActionPerformed(evt);
+            }
+        });
 
+        group.add(attackButton);
         attackButton.setText("How To Attack:");
 
+        group.add(spellsButton);
         spellsButton.setText("How To Cast Spells:");
 
-        blockCreepsButton.setText("How To Block Creeps:");
+        group.add(blockCreepsButton);
+        blockCreepsButton.setText("How To Block / Pull Creeps:");
 
+        group.add(itemsWorkButton);
         itemsWorkButton.setText("How Items Work:");
 
+        group.add(runeSpawnButton);
         runeSpawnButton.setText("When Runes Spawn:");
 
+        group.add(bestHeroesButton);
         bestHeroesButton.setText("What Heroes Best Suits the Player:");
 
         guideButton.setText("Guide");
@@ -65,6 +78,7 @@ public class Dota2Guide extends javax.swing.JFrame {
             }
         });
 
+        group.add(typeOfHeroesButton);
         typeOfHeroesButton.setText("What type of Heroes counters what Heroes:");
         typeOfHeroesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,13 +108,15 @@ public class Dota2Guide extends javax.swing.JFrame {
                     .addComponent(attackButton)
                     .addComponent(moveButton)
                     .addComponent(subTitleLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                         .addComponent(titleLabel)
-                        .addGap(65, 65, 65)))
-                .addContainerGap())
+                        .addGap(221, 221, 221))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,14 +172,64 @@ public class Dota2Guide extends javax.swing.JFrame {
     }//GEN-LAST:event_typeOfHeroesButtonActionPerformed
 
     private void guideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guideButtonActionPerformed
-      
-       if(attackButton.isSelected())
-       {
-           finalResult.setText(" ");
-       }
-           
-       
+        
+        
+        
+        if (moveButton.isSelected())
+        {
+            finalResult.setText(" - To move, just right click to a position you want to go to. " + "\n" + "\n" + " - If you want to walk to a specific spot on the map without constantly clicking, then just right click on the mini map on the bottom left of the screen. " + "\n" + "\n" + " - When using a teleportation scroll, instead of scrolling all the way to where you want to go and then left clicking on that specific position, just left click on the mini map and it will start teleporting you there to that specific spot. " + "\n" + "\n"
+            + " - When playing a hero/character who can create multiple copies of themself, you can hold the left mouse button and then drag along to get every single one of them. "
+            + "\n" + "   To get confirmation you got all of them, you can take a look at the statistics on the bottom middle of the screen and you will see multiple profiles on the character protrait. "
+            + "\n" + "   Now that you have control of all of them, they work the exact same as controlling one hero, just left click anywhere you want to head to and they will all start moving, "
+            + "\n" + "   but if you want to control only one of them then just press tab and you will move from one character to another and you will only be able to control one of them again, but to get back to controlling all of them just hold your left mouse button and drag."
+            );
+            
+            
+        }
+        
+        else if(attackButton.isSelected())
+        {
+               finalResult.setText(" - To attack creeps/minions, just right click on them" + "\n" + "\n" + " - To attack enemies, just right click on them."
+               + "\n" + "\n" + " - Remember when attacking, just make sure to click on the characters because it will not register as an attack and will register as if you wanted to move to that area. " + "\n" + "\n" 
+               + " - There is a more advanced way to attack and it is to press the A button and then right click anywhere, the hero will attack the closest creep to where you right clicked. "
+               + "\n" + "\n" + " - One important thing to remember during a Dota 2 game is last hitting");     
+        }
+        else if(spellsButton.isSelected())
+        {
+            finalResult.setText( " - There are four types of spells that you must know; target spells, cast spells, passive spells, and ultimates. "
+                + "\n" + "   The target spells are spells that can be targeted at a specific player. The cast spells are spells that can be casted and it is not intended for one target, it can affect multiple things like creeps, neutral creeps, and enemies. "
+                + "\n" + "   The passive spells are spells that can not be casted, but improve the hero in other ways like being able to regenerate mana faster, having evasion, reflecting some of the damage done to you to the enemy who hit you, being able to reduce the enemy's vision during the night, and much more. " 
+                + "\n" + "\n" + " - There are four buttons that are extremely important to remember because they will make or break anyone's game. These four buttons are Q, W, E, and R. "
+                + "\n" + "   Q is usually a target spell where you would press Q and then left click on an enemy or a creep. It could also be a cast spell where you can cast it without targeting someone. W can be either a cast spell, a target spell, or a passive spell. E is usually a passive. "
+                + "\n" + "   R is the final spell or also known as a ultimate, the ultimate is the strongest spell in any hero. The ultimate can either be a cast spell, a passive, or both combined. This does not mean to just run around and cast your ultimate on anything because it can turn the game around and it has the longest cooldown."
+                + "\n" + "   If the hero's ultimate is a passive there is nothing to worry about, but if you have to cast it, then always use it when it is the most reliable and when you are sure that the game will turn around after you cast it. "
+                + "\n" + "\n" + " - If you were in the middle of a casting a spell, but you wanted to cancel it then just press S. S is the button for cancelling actions. "
+                + "\n" + "\n" + " - Remember, that if you are against an enemy who cast a spell that stuns you be careful."
+                + "\n" + "   If you are in the middle of casting a spell, an enemy can cast that stunning spell and it will automatically cancel your spell.");
+        }
+        else if(blockCreepsButton.isSelected())
+        {
+            finalResult.setText(" - Blocking creeps is the most important factor to successful farming in Dota because blocking creeps will mean that the enemy's creeps will be on your side of the lane which then you can safely farm without worrying about being harassed."
+            + "\n" + "\n" + " - The instant the game starts, the creeps spawn so just move in front of them and then start blocking their path. In addition, while blocking their path, press your cancel button or S as default to cancel your movement and you will block them for even longer periods of time. "
+            + "\n" + "\n" + " - There are two methods of pulling creeps. First method is to get in the creeps vision when they are not attacking anyone and they will start chasing you. The second method to pulling creeps is to attack an enemy and the creeps will start chasing you, but the instant you stop attacking and start running, "
+            + "\n" + "    they will start attacking what is closest to them."
+            );
+        }
+        else if(itemsWorkButton.isSelected())
+        {
+         finalResult.setText(" - Items in game are extremely important because items are the only way for your hero to get strong."
+         + "\n" + "\n" + " - Items have many purposes like giving the player extra attack speed, evasion, extra damage, more health, more mana, more health or mana regeneration, and much more."
+         + "\n" + "\n" + " - If your hero is a tank then items that give more health and health regeneration are suggested."
+         + "\n" + "\n" + " - If your hero is a support then items that can regenerate the teams health and give them extra vision by placing wards are suggested. "
+         + "\n" + "\n" + " - If your hero is a carry then items that output a lot of damage and can help them survive during fights are suggested."        
+         + "\n" + "\n" + " - There are two types of wards, the sentry ward which reveals invisible heroes or wards, the observer ward which gives the team more vision by lighting up the area and that will show enemy heroes if they are coming to gank and they run under the lit area or show recently spawned runes. Wards are the most important item for giving the team vision, but carries rarely buy them and supports are expected to buy them."
+         );   
+        }
     }//GEN-LAST:event_guideButtonActionPerformed
+
+    private void moveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveButtonActionPerformed
+       
+    }//GEN-LAST:event_moveButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,6 +271,7 @@ public class Dota2Guide extends javax.swing.JFrame {
     private javax.swing.JRadioButton bestHeroesButton;
     private javax.swing.JRadioButton blockCreepsButton;
     private javax.swing.JTextArea finalResult;
+    private javax.swing.ButtonGroup group;
     private javax.swing.JButton guideButton;
     private javax.swing.JRadioButton itemsWorkButton;
     private javax.swing.JPanel jPanel1;
