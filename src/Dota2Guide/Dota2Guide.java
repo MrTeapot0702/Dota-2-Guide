@@ -11,7 +11,7 @@ package Dota2Guide;
  * @author Paul Lee
  */
 public class Dota2Guide extends javax.swing.JFrame {
-
+    
     
     public Dota2Guide() {
         initComponents();
@@ -166,25 +166,25 @@ public class Dota2Guide extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void typeOfHeroesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeOfHeroesButtonActionPerformed
         
     }//GEN-LAST:event_typeOfHeroesButtonActionPerformed
 
     private void guideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guideButtonActionPerformed
         
-        
+    
+         
         
         if (moveButton.isSelected())
         {
-            finalResult.setText(" - To move, just right click to a position you want to go to. " + "\n" + "\n" + " - If you want to walk to a specific spot on the map without constantly clicking, then just right click on the mini map on the bottom left of the screen. " + "\n" + "\n" + " - When using a teleportation scroll, instead of scrolling all the way to where you want to go and then left clicking on that specific position, just left click on the mini map and it will start teleporting you there to that specific spot. " + "\n" + "\n"
+            finalResult.setText(" - To move, just right click to a position you want to go to. " + "\n" + "\n" + " - If you want to walk to a specific spot on the map without constantly clicking, then just right click on the mini map on the bottom left of the screen. " 
+            + "\n" + "\n" + " - When using a teleportation scroll, instead of scrolling all the way to where you want to go and then left clicking on that specific position, just left click on the mini map and it will start teleporting you there to that specific spot. " + "\n" + "\n"
             + " - When playing a hero/character who can create multiple copies of themself, you can hold the left mouse button and then drag along to get every single one of them. "
             + "\n" + "   To get confirmation you got all of them, you can take a look at the statistics on the bottom middle of the screen and you will see multiple profiles on the character protrait. "
             + "\n" + "   Now that you have control of all of them, they work the exact same as controlling one hero, just left click anywhere you want to head to and they will all start moving, "
             + "\n" + "   but if you want to control only one of them then just press tab and you will move from one character to another and you will only be able to control one of them again, but to get back to controlling all of them just hold your left mouse button and drag."
-            );
-            
-            
+            );    
         }
         
         else if(attackButton.isSelected())
@@ -223,8 +223,19 @@ public class Dota2Guide extends javax.swing.JFrame {
          + "\n" + "\n" + " - If your hero is a support then items that can regenerate the teams health and give them extra vision by placing wards are suggested. "
          + "\n" + "\n" + " - If your hero is a carry then items that output a lot of damage and can help them survive during fights are suggested."        
          + "\n" + "\n" + " - There are two types of wards, the sentry ward which reveals invisible heroes or wards, the observer ward which gives the team more vision by lighting up the area and that will show enemy heroes if they are coming to gank and they run under the lit area or show recently spawned runes. Wards are the most important item for giving the team vision, but carries rarely buy them and supports are expected to buy them."
-         );   
+         + "\n" + "\n" + " - There is an item called, ''Bottle'' that regenerates a bit of health and mana. The bottle has 3 charges and once you use all of your charges, you can head back or teleport back to the Fountain / Base.  ");   
         }
+        else if(runeSpawnButton.isSelected())
+        {
+         finalResult.setText(" - There are two types of runes. Bounty runes that gives the entire team an extra set of gold / coin. Runes that boost a specific part of the character like doubling damage, reducing mana cost, giving full regeneration, and granting a player invisibility. "
+         + "\n" + "\n" + " - Bounty runes spawn every five minutes and anyone can go collect it because the whole team will benefit from it. In addition, the Bounty runes spawn at the very start of the game. It is possible to steal the enemy's rune, but it is also possible for the enemies to steal your runes."
+         + "\n" + "   Just remember if the whole enemy team is coming for the rune and you are by yourself then do not fight for it because it could cost you your life. "
+         + "\n" + "\n" + " - Boosting runes spawn every two minutes and do not spawn when the game starts. Boosting runes are extremely important for mid players as they spawn right outside of mid lane. "
+         + "\n" + "   If they have a boosting rune like double damage then it could change the game around because they have an easier chance of killing you which results in them getting extra experience and gold and they have the lane to themself which gives them free farm. "
+         + "\n" + "\n" + " - Runes recharge bottles so when a new rune spawns, just make sure to use all of your charges before you pick it up. With a bottle, you will be able to keep your rune and use it whenever you want to."
+         + "\n" + "   Although when a rune is in your bottle there is a time limit of 2 minutes. After 2 minutes, the bottled rune will be automatically activated. ");   
+        }
+            
     }//GEN-LAST:event_guideButtonActionPerformed
 
     private void moveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveButtonActionPerformed
